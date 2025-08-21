@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bunio – Retired Dev</title>
+  <meta name="description" content="Bunio – retired developer, loves chit-chat, cats and making new friends.">
+
+  <meta property="og:title" content="Bunio – Retired Dev">
+  <meta property="og:description" content="Retired dev, loves chit-chat, cats 🐱 and meeting new people.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bunio.dev">
+  <meta property="og:image" content="https://bunio.dev/og.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bunio – Retired Dev">
+  <meta name="twitter:description" content="Retired dev, loves chit-chat, cats 🐱 and meeting new people.">
+  <meta name="twitter:image" content="https://bunio.dev/og.png">
+
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #111;
+      --card-bg: #f9f9f9;
+      --accent: #e17dab;
+    }
+    [data-theme="dark"] {
+      --bg: #1a1a1a;
+      --text: #f5f5f5;
+      --card-bg: #2a2a2a;
+      --accent: #ff91c1;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background .3s, color .3s;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: var(--accent);
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      position: relative;
+      z-index: 2;
+    }
+    .theme-toggle {
+      cursor: pointer;
+      padding: .5rem 1rem;
+      border: none;
+      border-radius: .5rem;
+      background: var(--accent);
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .rainbow {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 400% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 4s linear infinite;
+    }
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.5rem;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+    th {
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    /* spadające koty */
+    .cat {
+      position: fixed;
+      top: -100px;
+      width: 35px;
+      opacity: 0.4;
+      z-index: 9999;
+      pointer-events: none;
+      animation-name: fall;
+    }
+    @keyframes fall {
+      0% { top: -100px; }
+      100% { top: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hi, I'm Bunio 👋</h1>
+    <p>Retired dev • Loves chit-chat 💬 • Cat person 🐱 • Open to new friends ✨</p>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>About Me</h2>
+      <p>I’m a retired developer who enjoys relaxing, chit-chatting with people, sharing ideas, and of course, cats. 🐾 Always happy to meet new friends online. Mentioned here people, i love you guys 🩷. I believe in cat supermacy btw. If you want to be approved discord user, write your nickname on my email and i'll add it!</p>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <ul>
+        <li>📧 Email: <a href="mailto:contact.Bunio@gmail.com">contact.Bunio@gmail.com</a></li>
+        <li>💻 GitHub: <a href="https://github.com/MrBunio" target="_blank">MrBunio</a></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Approved Discord Users List</h2>
+      <p>To everyone listed below, thank you very much for joining the Approved Discord Users list. We are trying to recruit as many people as possible! Love to you all ❤️. If you want to join our list, let me know on my Discord or at the email address below.</p>
+    </section>
+
+    <section class="card">
+      <h2>Approved Discord Users</h2>
+      <table>
+        <tr>
+          <th>Nickname</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td class="rainbow">angel of bnuuy 🐰</td>
+          <td>🐰 ❤️❤️</td>
+        </tr>
+        <tr>
+          <td class="rainbow">Sabubu (ccet) 👑</td>
+          <td>❤️❤️</td>
+        </tr>
+        <tr>
+         <td class="rainbow">Mocchi</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td class="rainbow">Pinkk Rose</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td>18 Marshy Silver Bubu</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td class="rainbow">Alastor</td>
+          <td>🎙️ ❤️❤️</td>
+        </tr>
+        <tr>
+          <td class="rainbow">༺|𝓑𝓮𝓷𝓼𝓪|༻</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td class="rainbow">fartprincess30 bibi(bea)</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td class="rainbow">Soap (deltarune one)</td>
+          <td>❤️ Deltarune fan spotted</td>
+        </tr>
+        <tr>
+          <td>Gerb</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td>divya #musicalfreak</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td>Arzhel</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td>Fluffy Quixaq</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td>Pingu</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td>Revolutionary Smile</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td>THE Canni 🍪</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td class="rainbow">Tuffcal | Angel of Ragebait</td>
+          <td>❤️</td>
+        </tr>
+        <tr>
+          <td class="rainbow">Vaso</td>
+          <td>meowl fan spotted ❤️</td>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Bunio</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      if (current === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+
+    function createNyan() {
+      const cat = document.createElement('img');
+      cat.src = 'https://i.redd.it/k5v48axtppqc1.jpeg';
+      cat.classList.add('cat');
+
+      cat.style.left = `${Math.random() * window.innerWidth}px`;
+      const duration = Math.random() * 3 + 3; // 3–6s
+      cat.style.animationDuration = `${duration}s`;
+
+      document.body.appendChild(cat);
+
+      setTimeout(() => {
+        cat.remove();
+      }, duration * 1000);
+    }
+
+    setInterval(createNyan, 2000);
+  </script>
+</body>
+</html>
