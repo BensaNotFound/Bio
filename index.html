@@ -10,123 +10,7 @@
   <meta property="og:description" content="Bensa - I make music/songs websites and im a person who likes to chill">
   <meta property="og:type" content="website">
 
-  <style>
-    :root {
-      --bg: #fff;
-      --text: #111;
-      --card-bg: #f9f9f9;
-      --accent: #e17dab;
-    }
-    [data-theme="dark"] {
-      --bg: #1a1a1a;
-      --text: #f5f5f5;
-      --card-bg: #2a2a2a;
-      --accent: #ff91c1;
-    }
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      transition: background .3s, color .3s;
-      overflow-x: hidden;
-    }
-    header {
-      padding: 2rem;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      color: var(--accent);
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      position: relative;
-      z-index: 2;
-    }
-    .card {
-      background: var(--card-bg);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,.1);
-    }
-    .card h2 {
-      margin-top: 0;
-      color: var(--accent);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      opacity: 0.7;
-      position: relative;
-      z-index: 2;
-    }
-    .theme-toggle {
-      cursor: pointer;
-      padding: .5rem 1rem;
-      border: none;
-      border-radius: .5rem;
-      background: var(--accent);
-      color: white;
-      font-size: 0.9rem;
-      margin-top: 1rem;
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .rainbow {
-      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      background-size: 400% 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: rainbow 4s linear infinite;
-    }
-    @keyframes rainbow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    th, td {
-      padding: 0.5rem;
-      text-align: left;
-      border-bottom: 1px solid #ccc;
-    }
-    th {
-      color: var(--accent);
-      font-size: 1.2rem;
-    }
-
-    /* spadające koty */
-    .cat {
-      position: fixed;
-      top: -100px;
-      width: 35px;
-      opacity: 0.4;
-      z-index: 9999;
-      pointer-events: none;
-      animation-name: fall;
-    }
-    @keyframes fall {
-      0% { top: -100px; }
-      100% { top: 100%; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -139,6 +23,14 @@
     <section class="card">
       <h2>About Me</h2>
       <p>I’m a goofy person who enjoys relaxing, chit-chatting with people and being positive I love making music and chilling with friends Always happy to meet new friends online im also a fuckass dumass so bear with me working on a project coming soon in 2030</p>
+    </section>
+
+<section class="card">
+      <h2>Contact</h2>
+      <ul>
+        <li>📧 Email: <a href="mailto:BensaNotFound@gmail.com">BensaNoFOund </a></li>
+        <li>💻 GitHub: <a href="https://github.com/BensaNotFound" target="_blank">BensaNotFound</a></li>
+      </ul>
     </section>
 
 
@@ -160,7 +52,7 @@
         </tr>
         <tr>
           <td class="rainbow">Melanie</td>
-          <td>❤️❤️❤️</td>
+          <td>Funny And Awesome</td>
         </tr>
         <tr>
          <td class="rainbow">Karrie</td>
@@ -168,7 +60,9 @@
         </tr>
         <tr>
          <td class="rainbow">Paige</td>
-          <td>❤️❤️❤️</td>
+          <td>Kewl As Hell...</td>
+
+
         </tr>
       </table>
     </section>
@@ -178,40 +72,6 @@
     <p>© 2025 Bunio EVERYONE THIS IS NOT MINE THIS IS MADE BY BUNIO AND HE IS I GOTTA TELL YA HES FUCKING AWESOME</p>
   </footer>
 
-  <script>
-    function toggleTheme() {
-      const current = document.documentElement.getAttribute('data-theme');
-      if (current === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    }
-
-    (function() {
-      const saved = localStorage.getItem('theme');
-      if (saved) document.documentElement.setAttribute('data-theme', saved);
-    })();
-
-    function createNyan() {
-      const cat = document.createElement('img');
-      cat.src = 'https://i.redd.it/k5v48axtppqc1.jpeg';
-      cat.classList.add('cat');
-
-      cat.style.left = `${Math.random() * window.innerWidth}px`;
-      const duration = Math.random() * 3 + 3; // 3–6s
-      cat.style.animationDuration = `${duration}s`;
-
-      document.body.appendChild(cat);
-
-      setTimeout(() => {
-        cat.remove();
-      }, duration * 1000);
-    }
-
-    setInterval(createNyan, 2000);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
