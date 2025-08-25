@@ -1,0 +1,115 @@
+ :root {
+      --bg: #fff;
+      --text: #111;
+      --card-bg: #f9f9f9;
+      --accent: #e17dab;
+    }
+    [data-theme="dark"] {
+      --bg: #1a1a1a;
+      --text: #f5f5f5;
+      --card-bg: #2a2a2a;
+      --accent: #ff91c1;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background .3s, color .3s;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: var(--accent);
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      position: relative;
+      z-index: 2;
+    }
+    .theme-toggle {
+      cursor: pointer;
+      padding: .5rem 1rem;
+      border: none;
+      border-radius: .5rem;
+      background: var(--accent);
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .rainbow {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 400% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 4s linear infinite;
+    }
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.5rem;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+    th {
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    /* spadające koty */
+    .cat {
+      position: fixed;
+      top: -100px;
+      width: 35px;
+      opacity: 0.4;
+      z-index: 9999;
+      pointer-events: none;
+      animation-name: fall;
+    }
+    @keyframes fall {
+      0% { top: -100px; }
+      100% { top: 100%; }
+    }
